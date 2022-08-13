@@ -1,0 +1,130 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Trenton Kennedy">
+	<main>
+		<img src="/headshot.jpg" class="block mx-auto" width="150" height="150" alt="Trenton Kennedy at a coffee shop">
+		<h1><span class="text-gradient">Trenton Kennedy</span> is a software developer at Oracle working on cloud
+			applications. Outside work he spends his time running marathons, lifting weights, and learning new sports.
+		</h1>
+		<span class="socials inline-flex justify-between space-x-2">
+			<img src="/logo-github.svg" width="30" height="30">
+			<img src="/logo-linkedin.svg" width="30" height="30">
+			<img src="/logo-instagram.svg" width="30" height="30">
+		</span>
+
+		<div class="projects mt-12">
+			<h2 class="font-bold text-lg mb-4">Projects</h2>
+			<div class="project flex flex-row justify-between mb-20">
+				<!-- https://www.renebergelt.de/blog/2019/09/creating-click-to-play-gifs-with-vanilla-javascript/ -->
+				<img src="/logly-screenshots.png" class="border border-gray-400" width="150" height="150" />
+				<div class="w-2/3">
+					<h3 class="">LOGLY</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium fugiat, neque non
+						architecto dolores minus voluptatum quae accusantium, culpa maxime eligendi veritatis eos
+						voluptas eveniet, inventore dignissimos ipsa quasi tempora?</p>
+				</div>
+			</div>
+			<div class="project flex flex-row justify-between mb-20">
+				<img src="/logly-screenshots.png" class="border border-gray-400" width="150" height="150" />
+				<div class="w-2/3">
+					<h3>Endurance Results</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nulla excepturi doloribus.
+						Eius adipisci et omnis ea magni illum saepe rem! Suscipit reiciendis quasi sunt, aliquam sint
+						molestias magnam itaque!</p>
+				</div>
+			</div>
+			<div class="project flex flex-row justify-between mb-20">
+				<img src="/logly-screenshots.png" class="border border-gray-400" width="150" height="150" />
+				<div class="w-2/3">
+					<h3>Redkix</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At id dolore delectus aperiam itaque
+						assumenda quaerat voluptatum sequi, quos harum porro repellendus corporis unde ea facilis
+						fugiat! Possimus, voluptatibus veritatis.</p>
+				</div>
+			</div>
+			<div class="project flex flex-row justify-between mb-20">
+				<img src="/logly-screenshots.png" class="border border-gray-400" width="150" height="150" />
+				<div class="w-2/3">
+					<h3>Sonicscoop</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet adipisci quas aperiam? Quidem
+						eveniet perferendis quis saepe, architecto consectetur repellat ratione unde exercitationem
+						ipsum recusandae quae rerum amet aperiam fugiat.</p>
+				</div>
+			</div>
+
+		</div>
+		<section class="mt-12">
+			<h2 class="font-bold text-lg mb-4">Writings</h2>
+			<p class="instructions">How I built Logly</p>
+			<p class="instructions">Improving the race results experience</p>
+			<p class="instructions">The creative process</p>
+		</section>
+		<section class="my-12">
+			<h2 class="font-bold text-lg mb-4">Companies I have worked for</h2>
+			<div class="flex flex-row space-x-8 w-full">
+				<img src="/oracle-logo.png" width="75">
+				<img src="/twitter-logo.png" width="75">
+				<img src="/st-jude-logo.png" width="75">
+				<img src="/ogilvy-logo.png" width="100">
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	:root {
+		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+	}
+
+	h1 {
+		margin: 2rem 0;
+	}
+
+	main {
+		margin: auto;
+		padding: 1em;
+		max-width: 60ch;
+	}
+
+	.text-gradient {
+		font-weight: 900;
+		background-image: var(--astro-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 200%;
+		background-position-y: 100%;
+		border-radius: 0.4rem;
+		animation: pulse 4s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+
+		0%,
+		100% {
+			background-position-y: 0%;
+		}
+
+		50% {
+			background-position-y: 80%;
+		}
+	}
+
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		background: #4f39fa;
+		padding: 1rem;
+		border-radius: 0.4rem;
+		color: var(--color-bg);
+	}
+
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>
