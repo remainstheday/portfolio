@@ -1,73 +1,77 @@
 ---
+import Headshot from '../components/Headshot.jsx';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Trenton Kennedy">
 	<main>
-		<img src="/headshot.jpg" class="block mx-auto" width="150" height="150" alt="Trenton Kennedy at a coffee shop">
+		<Headshot client:load />
+		<div class="block mx-auto mt-2 text-center">
+		<span class="socials block mx-auto inline-flex justify-between space-x-2">
+        			<a href="https://github.com/remainstheday">
+        				<img src="/logo-github.svg" width="25" height="25">
+        			</a>
+        			<a href="https://www.linkedin.com/in/trentonk/">
+        				<img src="/logo-linkedin.svg" width="25" height="25">
+        			</a>
+        			<a href="https://instagram.com/@kennedy_trenton">
+        				<img src="/logo-instagram.svg" width="25" height="25">
+        			</a>
+        		</span>
+        		</div>
 		<h1><span class="text-gradient">Trenton Kennedy</span> is a software developer at Oracle working on cloud
-			applications. Outside work he spends his time running marathons, lifting weights, and learning new sports.
+			applications. Outside the office he spends his time practicing new sports, going on road trips, and taking things apart to learn how they work.
 		</h1>
-		<span class="socials inline-flex justify-between space-x-2">
-			<img src="/logo-github.svg" width="30" height="30">
-			<img src="/logo-linkedin.svg" width="30" height="30">
-			<img src="/logo-instagram.svg" width="30" height="30">
-		</span>
 
 		<div class="projects mt-12">
-			<h2 class="font-bold text-lg mb-4">Projects</h2>
-			<div class="project flex flex-row justify-between mb-20">
-				<!-- https://www.renebergelt.de/blog/2019/09/creating-click-to-play-gifs-with-vanilla-javascript/ -->
+			<h2 class="font-bold text-2xl mb-4">Projects</h2>
+			<div class="project flex flex-row justify-between mb-16">
 				<img src="/logly-screenshots.png" class="border border-gray-400" width="150" height="150" />
 				<div class="w-2/3">
-					<h3 class="">LOGLY</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium fugiat, neque non
-						architecto dolores minus voluptatum quae accusantium, culpa maxime eligendi veritatis eos
-						voluptas eveniet, inventore dignissimos ipsa quasi tempora?</p>
+					<h3 class="font-bold">LOGLY</h3>
+					<p>A platform that platform enables cultural institutions to easily build digital guides and
+						instantly create immersive experiences for guests. This project was developed by yours truly using React.js, Node.js,
+						& PostgresQL.</p>
+					<a class="underline underline-offset-2 text-blue-600" href="https://logly.world">https://logly.world</a>
 				</div>
 			</div>
-			<div class="project flex flex-row justify-between mb-20">
-				<img src="/logly-screenshots.png" class="border border-gray-400" width="150" height="150" />
+			<div class="project flex flex-row justify-between mb-16">
+				<img src="/endurance-results-screenshot.png" class="border border-gray-400" width="150" height="150" />
 				<div class="w-2/3">
-					<h3>Endurance Results</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nulla excepturi doloribus.
-						Eius adipisci et omnis ea magni illum saepe rem! Suscipit reiciendis quasi sunt, aliquam sint
-						molestias magnam itaque!</p>
+					<h3 class="font-bold">Endurance Results</h3>
+					<p>During my time working on <a class="underline underline-offset-2 text-blue-600" href="https://www.stjude.org/">stjude.org</a> I led a small team tasked with building a real time webpage which loaded Marathon race results. Prior to this the race results were loaded on a PDF days after the race which was not easy to
+						read on mobile and lacked critical features such as search.</p>
 				</div>
 			</div>
-			<div class="project flex flex-row justify-between mb-20">
-				<img src="/logly-screenshots.png" class="border border-gray-400" width="150" height="150" />
+			<div class="project flex flex-row justify-between mb-16">
+				<img src="/redkix-screenshot.png" class="border border-gray-400" width="150" height="150" />
 				<div class="w-2/3">
-					<h3>Redkix</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At id dolore delectus aperiam itaque
-						assumenda quaerat voluptatum sequi, quos harum porro repellendus corporis unde ea facilis
-						fugiat! Possimus, voluptatibus veritatis.</p>
+					<h3 class="font-bold">Redkix</h3>
+					<p>This was a real time chat application that integrated with corporate email. My job
+						included writing plain HTML, CSS & Javascript to build the custom website and email newsletters. In 2018 Redkix was purchased by Facebook, and I've been kicking myself ever sense for not taking the full time job offer.</p>
+							<a class="underline underline-offset-2 text-blue-600" href="https://www.dailymail.co.uk/sciencetech/facebook/article-6007401/Facebook-buys-Redkix-hopes-Workplace-rival-Slack.html"> Press Release</a>
 				</div>
 			</div>
-			<div class="project flex flex-row justify-between mb-20">
-				<img src="/logly-screenshots.png" class="border border-gray-400" width="150" height="150" />
+			<div class="project flex flex-row justify-between mb-16">
+				<img src="/sonicscoop-screenshot.png" class="border border-gray-400" width="150" height="150" />
 				<div class="w-2/3">
-					<h3>Sonicscoop</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet adipisci quas aperiam? Quidem
-						eveniet perferendis quis saepe, architecto consectetur repellat ratione unde exercitationem
-						ipsum recusandae quae rerum amet aperiam fugiat.</p>
+					<h3 class="font-bold">Sonicscoop</h3>
+					<p>This was the coolest online community to work with. In 2016 The creators of <a href="https://sonicscoop.com/">sonicscoop.com</a> reached out wanting to create
+						a recommendation algorithm for their content and  to develop a forum for audiophiles. This was built entirely
+						on Wordpress with custom plugins written in PHP & Javascript.</p>
+					<a class="underline underline-offset-2 text-blue-600" href="https://sonicscoop.com/">https://sonicscoop.com</a>
 				</div>
 			</div>
 
 		</div>
-		<section class="mt-12">
-			<h2 class="font-bold text-lg mb-4">Writings</h2>
-			<p class="instructions">How I built Logly</p>
-			<p class="instructions">Improving the race results experience</p>
-			<p class="instructions">The creative process</p>
-		</section>
 		<section class="my-12">
-			<h2 class="font-bold text-lg mb-4">Companies I have worked for</h2>
-			<div class="flex flex-row space-x-8 w-full">
-				<img src="/oracle-logo.png" width="75">
-				<img src="/twitter-logo.png" width="75">
-				<img src="/st-jude-logo.png" width="75">
-				<img src="/ogilvy-logo.png" width="100">
+			<h2 class="font-bold text-lg mb-4">Experience</h2>
+			<div class="w-full space-x-12">
+				<img class="inline-block" src="/oracle-logo.png" width="154" height="44">
+
+				<img class="inline-block" src="/stjude-logo.jpg" width="75" height="75">
+				<img class="inline-block" src="/twitter-logo.png" width="50" height="25">
+				<img class="inline-block" src="/ogilvy-logo.png" width="154" height="44">
 			</div>
 		</section>
 	</main>
@@ -75,7 +79,9 @@ import Layout from '../layouts/Layout.astro';
 
 <style>
 	:root {
-		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+		/* --astro-gradient: linear-gradient(0deg, #000428, #004e92); */
+		/* --astro-gradient: linear-gradient(0deg, #0093E9, #80D0C7); */
+		--astro-gradient: linear-gradient(0deg, #43cea2, #185a9d);
 	}
 
 	h1 {
@@ -114,10 +120,8 @@ import Layout from '../layouts/Layout.astro';
 	.instructions {
 		line-height: 1.6;
 		margin: 1rem 0;
-		background: #4f39fa;
-		padding: 1rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
+		color: #185a9d;
+		font-weight: 500;
 	}
 
 
