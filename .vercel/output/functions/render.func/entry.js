@@ -1471,74 +1471,74 @@ const $$Index = createComponent(async ($$result, $$props, $$slots) => {
   const STYLES = [];
   for (const STYLE of STYLES)
     $$result.styles.add(STYLE);
-  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Trenton Kennedy", "class": "astro-2ZJQZGTO" }, { "default": () => renderTemplate`${maybeRenderHead($$result)}<main class="astro-2ZJQZGTO">
-		${renderComponent($$result, "Headshot", Headshot, { "client:load": true, "client:component-hydration": "load", "client:component-path": "/@fs/Users/trentonk/Desktop/portfolio/src/components/Headshot", "client:component-export": "default", "class": "astro-2ZJQZGTO" })}
-		<div class="block mx-auto mt-2 text-center astro-2ZJQZGTO">
-		<span class="socials block mx-auto inline-flex justify-between space-x-2 astro-2ZJQZGTO">
-        			<a href="https://github.com/remainstheday" class="astro-2ZJQZGTO">
-        				<img src="/logo-github.svg" width="25" height="25" class="astro-2ZJQZGTO">
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Trenton Kennedy", "class": "astro-V33MGSVN" }, { "default": () => renderTemplate`${maybeRenderHead($$result)}<main class="astro-V33MGSVN">
+		${renderComponent($$result, "Headshot", Headshot, { "client:load": true, "client:component-hydration": "load", "client:component-path": "/@fs/Users/trentonk/Desktop/portfolio/src/components/Headshot", "client:component-export": "default", "class": "astro-V33MGSVN" })}
+		<div class="block mx-auto mt-2 text-center astro-V33MGSVN">
+		<span class="socials block mx-auto inline-flex justify-between space-x-2 astro-V33MGSVN">
+        			<a href="https://github.com/remainstheday" class="astro-V33MGSVN">
+        				<img src="/logo-github.svg" width="25" height="25" class="astro-V33MGSVN">
         			</a>
-        			<a href="https://www.linkedin.com/in/trentonk/" class="astro-2ZJQZGTO">
-        				<img src="/logo-linkedin.svg" width="25" height="25" class="astro-2ZJQZGTO">
+        			<a href="https://www.linkedin.com/in/trentonk/" class="astro-V33MGSVN">
+        				<img src="/logo-linkedin.svg" width="25" height="25" class="astro-V33MGSVN">
         			</a>
-        			<a href="https://instagram.com/@kennedy_trenton" class="astro-2ZJQZGTO">
-        				<img src="/logo-instagram.svg" width="25" height="25" class="astro-2ZJQZGTO">
+        			<a href="https://instagram.com/@kennedy_trenton" class="astro-V33MGSVN">
+        				<img src="/logo-instagram.svg" width="25" height="25" class="astro-V33MGSVN">
         			</a>
         		</span>
         		</div>
-		<h1 class="astro-2ZJQZGTO"><span class="text-gradient astro-2ZJQZGTO">Trenton Kennedy</span> is a software developer at Oracle working on cloud
+		<h1 class="astro-V33MGSVN"><span class="text-gradient astro-V33MGSVN">Trenton Kennedy</span> is a software developer at Oracle working on cloud
 			applications. Outside the office he spends his time practicing new sports, going on road trips, and taking things apart to learn how they work.
 		</h1>
 
-		<div class="projects mt-12 astro-2ZJQZGTO">
-			<h2 class="font-bold text-2xl mb-4 astro-2ZJQZGTO">Projects</h2>
-			<div class="project flex flex-row justify-between mb-16 astro-2ZJQZGTO">
-				<img src="/logly-screenshots.png" class="border border-gray-400 astro-2ZJQZGTO" width="150" height="150">
-				<div class="w-2/3 astro-2ZJQZGTO">
-					<h3 class="font-bold astro-2ZJQZGTO">LOGLY</h3>
-					<p class="astro-2ZJQZGTO">A platform that platform enables cultural institutions to easily build digital guides and
+		<div class="projects mt-12 astro-V33MGSVN">
+			<h2 class="font-bold text-2xl mb-4 astro-V33MGSVN">Projects</h2>
+			<div class="project flex flex-row justify-between mb-16 astro-V33MGSVN">
+				<img src="/logly-screenshots.png" class="border border-gray-400 astro-V33MGSVN" width="150" height="150">
+				<div class="w-2/3 astro-V33MGSVN">
+					<h3 class="font-bold astro-V33MGSVN">LOGLY</h3>
+					<p class="astro-V33MGSVN">A platform that platform enables cultural institutions to easily build digital guides and
 						instantly create immersive experiences for guests. This project was developed by yours truly using React.js, Node.js,
 						& PostgresQL.</p>
-					<a class="underline underline-offset-2 text-blue-600 astro-2ZJQZGTO" href="https://logly.world">https://logly.world</a>
+					<a class="underline underline-offset-2 text-blue-600 astro-V33MGSVN" href="https://logly.world">https://logly.world</a>
 				</div>
 			</div>
-			<div class="project flex flex-row justify-between mb-16 astro-2ZJQZGTO">
-				<img src="/endurance-results-screenshot.png" class="border border-gray-400 astro-2ZJQZGTO" width="150" height="150">
-				<div class="w-2/3 astro-2ZJQZGTO">
-					<h3 class="font-bold astro-2ZJQZGTO">Endurance Results</h3>
-					<p class="astro-2ZJQZGTO">During my time working on <a class="underline underline-offset-2 text-blue-600 astro-2ZJQZGTO" href="https://www.stjude.org/">stjude.org</a> I led a small team tasked with building a real time webpage which loaded Marathon race results. Prior to this the race results were loaded on a PDF days after the race which was not easy to
+			<div class="project flex flex-row justify-between mb-16 astro-V33MGSVN">
+				<img src="/endurance-results-screenshot.png" class="border border-gray-400 astro-V33MGSVN" width="150" height="150">
+				<div class="w-2/3 astro-V33MGSVN">
+					<h3 class="font-bold astro-V33MGSVN">Endurance Results</h3>
+					<p class="astro-V33MGSVN">During my time working on <a class="underline underline-offset-2 text-blue-600 astro-V33MGSVN" href="https://www.stjude.org/">stjude.org</a> I led a small team tasked with building a real time webpage which loaded Marathon race results. Prior to this the race results were loaded on a PDF days after the race which was not easy to
 						read on mobile and lacked critical features such as search.</p>
 				</div>
 			</div>
-			<div class="project flex flex-row justify-between mb-16 astro-2ZJQZGTO">
-				<img src="/redkix-screenshot.png" class="border border-gray-400 astro-2ZJQZGTO" width="150" height="150">
-				<div class="w-2/3 astro-2ZJQZGTO">
-					<h3 class="font-bold astro-2ZJQZGTO">Redkix</h3>
-					<p class="astro-2ZJQZGTO">This was a real time chat application that integrated with corporate email. My job
+			<div class="project flex flex-row justify-between mb-16 astro-V33MGSVN">
+				<img src="/redkix-screenshot.png" class="border border-gray-400 astro-V33MGSVN" width="150" height="150">
+				<div class="w-2/3 astro-V33MGSVN">
+					<h3 class="font-bold astro-V33MGSVN">Redkix</h3>
+					<p class="astro-V33MGSVN">This was a real time chat application that integrated with corporate email. My job
 						included writing plain HTML, CSS & Javascript to build the custom website and email newsletters. In 2018 Redkix was purchased by Facebook, and I've been kicking myself ever sense for not taking the full time job offer.</p>
-							<a class="underline underline-offset-2 text-blue-600 astro-2ZJQZGTO" href="https://www.dailymail.co.uk/sciencetech/facebook/article-6007401/Facebook-buys-Redkix-hopes-Workplace-rival-Slack.html"> Press Release</a>
+							<a class="underline underline-offset-2 text-blue-600 astro-V33MGSVN" href="https://www.dailymail.co.uk/sciencetech/facebook/article-6007401/Facebook-buys-Redkix-hopes-Workplace-rival-Slack.html"> Press Release</a>
 				</div>
 			</div>
-			<div class="project flex flex-row justify-between mb-16 astro-2ZJQZGTO">
-				<img src="/sonicscoop-screenshot.png" class="border border-gray-400 astro-2ZJQZGTO" width="150" height="150">
-				<div class="w-2/3 astro-2ZJQZGTO">
-					<h3 class="font-bold astro-2ZJQZGTO">Sonicscoop</h3>
-					<p class="astro-2ZJQZGTO">This was the coolest online community to work with. In 2016 The creators of <a href="https://sonicscoop.com/" class="astro-2ZJQZGTO">sonicscoop.com</a> reached out wanting to create
+			<div class="project flex flex-row justify-between mb-16 astro-V33MGSVN">
+				<img src="/sonicscoop-screenshot.png" class="border border-gray-400 astro-V33MGSVN" width="150" height="150">
+				<div class="w-2/3 astro-V33MGSVN">
+					<h3 class="font-bold astro-V33MGSVN">Sonicscoop</h3>
+					<p class="astro-V33MGSVN">This was the coolest online community to work with. In 2016 The creators of <a href="https://sonicscoop.com/" class="astro-V33MGSVN">sonicscoop.com</a> reached out wanting to create
 						a recommendation algorithm for their content and  to develop a forum for audiophiles. This was built entirely
 						on Wordpress with custom plugins written in PHP & Javascript.</p>
-					<a class="underline underline-offset-2 text-blue-600 astro-2ZJQZGTO" href="https://sonicscoop.com/">https://sonicscoop.com</a>
+					<a class="underline underline-offset-2 text-blue-600 astro-V33MGSVN" href="https://sonicscoop.com/">https://sonicscoop.com</a>
 				</div>
 			</div>
 
 		</div>
-		<section class="my-12 astro-2ZJQZGTO">
-			<h2 class="font-bold text-lg mb-4 astro-2ZJQZGTO">Experience</h2>
-			<div class="w-full space-x-12 astro-2ZJQZGTO">
-				<img class="inline-block astro-2ZJQZGTO" src="/oracle-logo.png" width="154" height="44">
+		<section class="my-12 astro-V33MGSVN">
+			<h2 class="font-bold text-lg mb-4 astro-V33MGSVN">Experience</h2>
+			<div class="w-full space-x-12 astro-V33MGSVN">
+				<img class="inline-block astro-V33MGSVN" src="/oracle-logo.png" width="154" height="44">
 
-				<img class="inline-block astro-2ZJQZGTO" src="/stjude-logo.jpg" width="75" height="75">
-				<img class="inline-block astro-2ZJQZGTO" src="/twitter-logo.png" width="50" height="25">
-				<img class="inline-block astro-2ZJQZGTO" src="/ogilvy-logo.png" width="154" height="44">
+				<img class="inline-block astro-V33MGSVN" src="/stjude-logo.jpg" width="75" height="75">
+				<img class="inline-block astro-V33MGSVN" src="/Twitter-Logo.png" width="50" height="25">
+				<img class="inline-block astro-V33MGSVN" src="/ogilvy-logo.png" width="154" height="44">
 			</div>
 		</section>
 	</main>` })}`;
@@ -1627,7 +1627,7 @@ function deserializeManifest(serializedManifest) {
   };
 }
 
-const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/vercel/serverless","routes":[{"file":"","links":["assets/index.39ba8936.css"],"scripts":[],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","_meta":{"trailingSlash":"ignore"}}}],"base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"isAstroFlavoredMd":false},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.js","/@fs/Users/trentonk/Desktop/portfolio/src/components/Headshot":"Headshot.b50747fa.js","@astrojs/react/client.js":"client.4c295fae.js","astro:scripts/before-hydration.js":"data:text/javascript;charset=utf-8,//[no before-hydration script]"},"assets":["/assets/index.39ba8936.css","/Headshot.b50747fa.js","/Twitter-Logo.png","/client.4c295fae.js","/endurance-results-screenshot.png","/favicon.ico","/giphy.gif","/headshot.jpg","/logly-preview.gif","/logly-screenshot.png","/logly-screenshots.png","/logo-github.svg","/logo-instagram.svg","/logo-linkedin.svg","/ogilvy-logo.png","/oracle-logo.png","/redkix-screenshot.png","/sonicscoop-screenshot.png","/stjude-logo.jpg","/chunks/index.e14ada9b.js"]}), {
+const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/vercel/serverless","routes":[{"file":"","links":["assets/index.14bc61f6.css"],"scripts":[],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","_meta":{"trailingSlash":"ignore"}}}],"base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"isAstroFlavoredMd":false},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.js","/@fs/Users/trentonk/Desktop/portfolio/src/components/Headshot":"Headshot.b50747fa.js","@astrojs/react/client.js":"client.4c295fae.js","astro:scripts/before-hydration.js":"data:text/javascript;charset=utf-8,//[no before-hydration script]"},"assets":["/assets/index.14bc61f6.css","/Headshot.b50747fa.js","/Twitter-Logo.png","/client.4c295fae.js","/endurance-results-screenshot.png","/favicon.ico","/giphy.gif","/headshot.jpg","/logly-preview.gif","/logly-screenshot.png","/logly-screenshots.png","/logo-github.svg","/logo-instagram.svg","/logo-linkedin.svg","/ogilvy-logo.png","/oracle-logo.png","/redkix-screenshot.png","/sonicscoop-screenshot.png","/stjude-logo.jpg","/chunks/index.e14ada9b.js"]}), {
 	pageMap: pageMap,
 	renderers: renderers
 });
