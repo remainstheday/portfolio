@@ -1,0 +1,4 @@
+- Let's talk about web accessibility. Developers It's our job to bring this subject up in meetings and there are no excuse for forgetting. In case you aren't convinced here is a list of reasons to recommend implementing accessibility in your next meeting:
+	- A lot of the implementation can be automated with e2e testing frameworks like Playwright.
+	- Web accessibility will do more for user conversions than clean code.
+	- 
