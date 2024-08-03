@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+const pageTitle = "Writings by Trenton Kennedy";
+const allWritings = await Astro.glob("../pages/writings/*md");
+---
+
+<Layout title={pageTitle}>
+    <div class="flex max-w-[960px] mx-auto my-4">
+        <div class="lg:w-1/2 lg:px-20">
+            <h1><a href="/">Trenton Kennedy</a></h1>
+            <img src="/headshot.jpg" alt="" class="mt-10" />
+        </div>
+        <div class="lg:w-2/3 lg:px-10 lg:pt-12">
+            <nav class="">
+                <a href="/writings">Writings</a>
+                <hr class="h-1 w-5 border-black" />
+                <a href="/athletics">Athletics</a>
+                <hr class="h-1 w-5 border-black" />
+                <a href="/portfolio">Portfolio</a>
+            </nav>
+
+            <div class="my-10">
+                {
+                    allWritings.map((article) => (
+                        <a href={article.url}>{article.frontmatter.title}</a>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</Layout>

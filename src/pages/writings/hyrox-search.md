@@ -1,0 +1,94 @@
+---
+title: Hyrox AI Search
+pubDate: 2024-09-01
+description: "building a niche LLM for the Hyrox community"
+author: "Trenton Kennedy"
+---
+
+# Hyrox AI Search
+
+## Introduction
+
+Recently I decided to train my own Large Language Model (LLM) on all the information I could find publicly about the sport of Hyrox. This exercise led me to create a specialized “search engine” that is highly knowledgable on information related to the sport I love so dearly. For my “Hyrox AI Search Engine” app to be useful it needed a mixture of fine-tuning, SQL data querying, and Resource Augmented Generation. To be honest most of this engineering was only possible thanks to tools like Langchain which make it possible for engineers like myself to interact with AI models programmatically. Another interesting takeaway was that I had to implement guard rails throughout the application stack to ensure the LLM won’t get abused with off-topic questions. The final project came together nicely! I see potential for niche communities to benefit from something like this.
+
+## What about ChatGPT?
+
+While ChatGPT is certainly the most popular LLM available today and it has the most impressive capabilities it sometimes struggles to provide meaningful or even accurate information when it comes to niche subjects. Even a simple question like “what is a Hyrox event?” shows us that ChatGPT cannot be trusted (_Kettle bell **swings** are not a part of Hyrox racing_). **ChatGPT brought LLM’s to the general public but open source models + engineers will be responsible for integrating LLM functionality into existing applications we all use today.**
+
+I’m betting that custom “AI agents” trained on a certain subject, maintained by specialists, and regularly updated will be how this new technology shines in the near future.
+
+**Open Source FTW**
+
+Meta’s Llama 3 (which is what I used in this application) can run locally on the developer’s computer and integrate into existing applications instead of running all AI interactions “in the cloud” the way (closed)OpenAI expects things to work.
+
+## Is it actually useful?
+
+To measure usefulness I created a set of increasingly complex questions that people are likely to ask on the subject of Hyrox and then compared the answers between ChatGPT vs [remainstheday.org/hyrox](http://remainstheday.org/hyrox) . As an athlete myself and member of the Hyrox community expectations were high. I needed this model to not only provide better answers than ChatGPT but to also teach me something new about the sport with accuracy. Imagine being able to immediately answer questions like:
+
+“who are the fastest female athletes in Doubles Hyrox?”
+
+“what is the average finishing time for males in the 30-34 age group?”
+
+“In Hyrox doubles how many times can partners swap out during each workout?”
+
+Ultimately the community can determine it’s usefulness but I’m convinced that it’s already more useful than Hyrox’s own website.
+
+## Technology Stack
+
+The entire application is made up of a PostgreQL database, open-source LLM (Llama 3.1), and a single-page React.js application for the front-end.
+
+I trained the LLM locally on an M1 Macbook Pro with PDF documents created mostly from web pages. The following frameworks were instrumental in accomplishing this step:
+
+- LangChain
+- LlamaIndex
+- supabase Vector DB
+
+Meta’s open source LLama 3.1 AI model is proving to be one of the best options available for projects on a hobbyist budget like mine. Hosting LLM’s however is relatively expensive so by training my model locally and then deploying it to Replicate for production use I was able to save costs.
+
+## Guardrails
+
+When I set out to build this my first concern was around making sure the LLM knows which questions and topics to avoid talking about. If the user asks “how can I take 3 strokes off my golf game?” or “what is the capital of Montana?” then the Assistant needs to respond with something along the lines of “That question is outside the scope of my capabilities. I am only trained to answer questions regarding the sport of Hyrox”. To do this I needed to implement the following guardrails.
+
+- Ensure the prompt input has a character limit and doesn’t allow weird inputs like code injection. This requires user prompts to be short and sweet.
+- Rate limit the API endpoint. To avoid “spam attacks” where some person or bot rapidly submits a bunch of questions the application reasonably limits API requests per user. This also ensures I don’t have run away costs on my server.
+- Prompt engineering to stay on topic and avoid LLM abuse. In this application there is never a use case for profanity or responding to subjects unrelated to Hyrox. To protect against any possible prompts that a user can enter I engineered some prewritten instructions that tells the LLM initially how to respond given certain keywords that might be in their prompt.
+
+## Data Set
+
+For the LLM to be as factual as possible I resorted to training it on information publicly available from the Hyrox website and Wikipedia, this includes the official rule books, website content about the distances & format, athlete results, upcoming races, history of the sport, etc.
+
+## Future Improvements
+
+For right now I am simply collecting feedback on the existing version of this project to help me determine which direction I should take with it.
+
+In the future this “AI Assistant” could take different forms and doesn’t necessarily have to be a chat interface. It could also be used alongside other
+
+## Additional Resources
+
+[How to migrate from legacy LangChain agents to LangGraph | 🦜️🔗 Langchain](https://js.langchain.com/v0.2/docs/how_to/migrate_agent)
+
+[createOpenAIToolsAgent | LangChain.js - v0.2.12](https://v02.api.js.langchain.com/functions/langchain_agents.createOpenAIToolsAgent.html)
+
+[Build a Question/Answering system over SQL data | 🦜️🔗 Langchain](https://js.langchain.com/v0.2/docs/tutorials/sql_qa/)
+
+[SqlToolkit | LangChain.js - v0.2.11](https://v02.api.js.langchain.com/classes/langchain_agents_toolkits_sql.SqlToolkit.html)
+
+[The Biggest Issues I've Faced Web Scraping (and how to fix them)](https://www.youtube.com/watch?v=vxk6YPRVg_o)
+
+[How to Finetune and Inference Llama-3 - Inferless](https://docs.inferless.com/how-to-guides/how-to-finetune--and-inference-llama3)
+
+[Fine-tune an LLM in minutes (ft. Llama 2, CodeLlama, Mistral, etc.)](https://modal.com/docs/examples/llm-finetuning)
+
+["I want Llama3 to perform 10x with my private knowledge" - Local Agentic RAG w/ llama3](https://www.youtube.com/watch?v=u5Vcrwpzoz8)
+
+[How to connect LLM to SQL database with LangChain SQLChain](https://medium.com/dataherald/how-to-langchain-sqlchain-c7342dd41614)
+
+[1. Introduction to RAG with Langchain — Ragatouille](https://www.sakunaharinda.xyz/ragatouille-book/1_Intro.html)
+
+[Ollama meets LangChain](https://www.youtube.com/watch?v=k_1pOF1mj8k&list=PL8motc6AQftnHhi2X8M3rqEFwERPVup4c&index=4)
+
+["I want Llama3 to perform 10x with my private knowledge" - Local Agentic RAG w/ llama3](https://www.youtube.com/watch?v=u5Vcrwpzoz8)
+
+[RAG Explained](https://www.youtube.com/watch?v=qppV3n3YlF8)
+
+[Learn RAG From Scratch – Python AI Tutorial from a LangChain Engineer](https://www.youtube.com/watch?v=sVcwVQRHIc8)
