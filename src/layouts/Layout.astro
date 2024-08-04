@@ -1,31 +1,45 @@
 ---
+import Navigation from "../components/Navigation.astro";
 export interface Props {
-	title: string;
+    title: string;
 }
 
 const { title } = Astro.props as Props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=UA-93552009-1"></script>
-		<script is:inline>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script
+            is:inline
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-93552009-1"
+        ></script>
+        <script is:inline>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-			gtag('config', 'UA-93552009-1');
-		</script>
-
-	</head>
-	<body>
-		<slot />
-	</body>
+            gtag("config", "UA-93552009-1");
+        </script>
+    </head>
+    <body>
+        <div class="flex justify-around max-w-[1200px] mx-auto my-4">
+            <div class="lg:w-1/4 lg:px-10 space-y-16">
+                <h1><a href="/">Trenton Kennedy </a></h1>
+                <Navigation />
+            </div>
+            <div class="lg:w-2/3 lg:pt-10">
+                <slot />
+            </div>
+        </div>
+    </body>
 </html>
