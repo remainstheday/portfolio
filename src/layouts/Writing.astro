@@ -1,0 +1,91 @@
+---
+import "@fontsource/tiny5";
+import { ViewTransitions, fade, slide } from "astro:transitions";
+import { Image } from "astro:assets";
+import type { MarkdownLayoutProps } from "astro";
+
+type Props = MarkdownLayoutProps<{
+    // Define frontmatter props here
+    title: string;
+    background: string;
+    date: string;
+}>;
+
+const { frontmatter } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{frontmatter.title}</title>
+        <ViewTransitions />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script
+            is:inline
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-93552009-1"
+        ></script>
+        <script is:inline>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "UA-93552009-1");
+        </script>
+    </head>
+    <body>
+        <div class="w-full">
+            <Image
+                class="w-full xl:w-1/2 left-0 xl:left-auto h-48 xl:h-full object-cover xl:mt-0 xl:fixed z-0 right-0 xl:top-0"
+                src={frontmatter.background}
+                alt=""
+                width={250}
+                height={250}
+            />
+            <div
+                class="w-full xl:w-1/2 z-10 px-4 xl:px-10 py-4 xl:py-4 bg-[#fffff8]"
+            >
+                <nav class="flex flex-row justify-between mb-8">
+                    <a href="/writings" class="flex flex-row items-center">
+                        <svg
+                            width="15"
+                            height="15"
+                            viewBox="0 0 15 15"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            ><path
+                                d="M6.85355 3.14645C7.04882 3.34171 7.04882 3.65829 6.85355 3.85355L3.70711 7H12.5C12.7761 7 13 7.22386 13 7.5C13 7.77614 12.7761 8 12.5 8H3.70711L6.85355 11.1464C7.04882 11.3417 7.04882 11.6583 6.85355 11.8536C6.65829 12.0488 6.34171 12.0488 6.14645 11.8536L2.14645 7.85355C1.95118 7.65829 1.95118 7.34171 2.14645 7.14645L6.14645 3.14645C6.34171 2.95118 6.65829 2.95118 6.85355 3.14645Z"
+                                fill="currentColor"
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"></path></svg
+                        >
+                        Trenton Kennedy
+                    </a>
+                </nav>
+                <main class="relative bg-[#fffff8]">
+                    <h1
+                        class={`font-bold text-6xl md:text-6xl lg:text-8xl max-w-3xl`}
+                    >
+                        {frontmatter.title}
+                    </h1>
+
+                    <div class="w-full">
+                        <slot />
+                    </div>
+                </main>
+                <slot />
+            </div>
+        </div>
+    </body>
+</html>
+<style>
+    nav a {
+        font-family: "Tiny5", sans-serif;
+    }
+</style>
