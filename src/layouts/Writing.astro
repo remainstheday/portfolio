@@ -69,17 +69,14 @@ const { frontmatter } = Astro.props;
                     </a>
                 </nav>
                 <main class="relative bg-[#fffff8]">
-                    <h1
-                        class={`font-bold text-6xl md:text-6xl lg:text-8xl max-w-3xl`}
-                    >
+                    <h1 class={`font-bold text-4xl lg:text-6xl max-w-3xl`}>
                         {frontmatter.title}
                     </h1>
 
-                    <div class="w-full">
-                        <slot />
+                    <div class="w-full my-9 prose prose-stone">
+                        <slot class="" />
                     </div>
                 </main>
-                <slot />
             </div>
         </div>
     </body>
@@ -87,5 +84,9 @@ const { frontmatter } = Astro.props;
 <style>
     nav a {
         font-family: "Tiny5", sans-serif;
+    }
+
+    h3 {
+        font-weight: bold;
     }
 </style>

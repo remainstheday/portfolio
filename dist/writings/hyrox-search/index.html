@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-deimkshs> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/x-icon" href="/favicon.ico"><meta name="generator" content="Astro v4.13.1"><title>Hyrox AI Search</title><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-93552009-1"></script><script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "UA-93552009-1");
+        </script><link rel="stylesheet" href="/_astro/fitness.hwpqzNrX.css">
+<style>.astro-route-announcer{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}nav[data-astro-cid-deimkshs] a[data-astro-cid-deimkshs]{font-family:Tiny5,sans-serif}h3[data-astro-cid-deimkshs]{font-weight:700}
+</style><script type="module" src="/_astro/hoisted.XYQjTWMW.js"></script></head> <body data-astro-cid-deimkshs> <div class="w-full" data-astro-cid-deimkshs> <img src="/3b21e96676f7400fb61d071518714734.jpg" class="w-full xl:w-1/2 left-0 xl:left-auto h-48 xl:h-full object-cover xl:mt-0 xl:fixed z-0 right-0 xl:top-0" alt="" data-astro-cid-deimkshs width="250" height="250" loading="lazy" decoding="async"> <div class="w-full xl:w-1/2 z-10 px-4 xl:px-10 py-4 xl:py-4 bg-[#fffff8]" data-astro-cid-deimkshs> <nav class="flex flex-row justify-between mb-8" data-astro-cid-deimkshs> <a href="/writings" class="flex flex-row items-center" data-astro-cid-deimkshs> <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" data-astro-cid-deimkshs><path d="M6.85355 3.14645C7.04882 3.34171 7.04882 3.65829 6.85355 3.85355L3.70711 7H12.5C12.7761 7 13 7.22386 13 7.5C13 7.77614 12.7761 8 12.5 8H3.70711L6.85355 11.1464C7.04882 11.3417 7.04882 11.6583 6.85355 11.8536C6.65829 12.0488 6.34171 12.0488 6.14645 11.8536L2.14645 7.85355C1.95118 7.65829 1.95118 7.34171 2.14645 7.14645L6.14645 3.14645C6.34171 2.95118 6.65829 2.95118 6.85355 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" data-astro-cid-deimkshs></path></svg>
+Trenton Kennedy
+</a> </nav> <main class="relative bg-[#fffff8]" data-astro-cid-deimkshs> <h1 class="font-bold text-4xl lg:text-6xl max-w-3xl" data-astro-cid-deimkshs> Hyrox AI Search </h1> <div class="w-full my-9 prose prose-stone" data-astro-cid-deimkshs> <h1 id="hyrox-ai-search">Hyrox AI Search</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Recently I decided to train my own Large Language Model (LLM) on all the information I could find publicly about the sport of Hyrox. This exercise led me to create a specialized “search engine” that is highly knowledgable on information related to the sport I love so dearly. For my “Hyrox AI Search Engine” app to be useful it needed a mixture of fine-tuning, SQL data querying, and Resource Augmented Generation. To be honest most of this engineering was only possible thanks to tools like Langchain which make it possible for engineers like myself to interact with AI models programmatically. Another interesting takeaway was that I had to implement guard rails throughout the application stack to ensure the LLM won’t get abused with off-topic questions. The final project came together nicely! I see potential for niche communities to benefit from something like this.</p>
+<h2 id="what-about-chatgpt">What about ChatGPT?</h2>
+<p>While ChatGPT is certainly the most popular LLM available today and it has the most impressive capabilities it sometimes struggles to provide meaningful or even accurate information when it comes to niche subjects. Even a simple question like “what is a Hyrox event?” shows us that ChatGPT cannot be trusted (<em>Kettle bell <strong>swings</strong> are not a part of Hyrox racing</em>). <strong>ChatGPT brought LLM’s to the general public but open source models + engineers will be responsible for integrating LLM functionality into existing applications we all use today.</strong></p>
+<p>I’m betting that custom “AI agents” trained on a certain subject, maintained by specialists, and regularly updated will be how this new technology shines in the near future.</p>
+<p><strong>Open Source FTW</strong></p>
+<p>Meta’s Llama 3 (which is what I used in this application) can run locally on the developer’s computer and integrate into existing applications instead of running all AI interactions “in the cloud” the way (closed)OpenAI expects things to work.</p>
+<h2 id="is-it-actually-useful">Is it actually useful?</h2>
+<p>To measure usefulness I created a set of increasingly complex questions that people are likely to ask on the subject of Hyrox and then compared the answers between ChatGPT vs <a href="http://remainstheday.org/hyrox">remainstheday.org/hyrox</a> . As an athlete myself and member of the Hyrox community expectations were high. I needed this model to not only provide better answers than ChatGPT but to also teach me something new about the sport with accuracy. Imagine being able to immediately answer questions like:</p>
+<p>“who are the fastest female athletes in Doubles Hyrox?”</p>
+<p>“what is the average finishing time for males in the 30-34 age group?”</p>
+<p>“In Hyrox doubles how many times can partners swap out during each workout?”</p>
+<p>Ultimately the community can determine it’s usefulness but I’m convinced that it’s already more useful than Hyrox’s own website.</p>
+<h2 id="technology-stack">Technology Stack</h2>
+<p>The entire application is made up of a PostgreQL database, open-source LLM (Llama 3.1), and a single-page React.js application for the front-end.</p>
+<p>I trained the LLM locally on an M1 Macbook Pro with PDF documents created mostly from web pages. The following frameworks were instrumental in accomplishing this step:</p>
+<ul>
+<li>LangChain</li>
+<li>LlamaIndex</li>
+<li>supabase Vector DB</li>
+</ul>
+<p>Meta’s open source LLama 3.1 AI model is proving to be one of the best options available for projects on a hobbyist budget like mine. Hosting LLM’s however is relatively expensive so by training my model locally and then deploying it to Replicate for production use I was able to save costs.</p>
+<h2 id="guardrails">Guardrails</h2>
+<p>When I set out to build this my first concern was around making sure the LLM knows which questions and topics to avoid talking about. If the user asks “how can I take 3 strokes off my golf game?” or “what is the capital of Montana?” then the Assistant needs to respond with something along the lines of “That question is outside the scope of my capabilities. I am only trained to answer questions regarding the sport of Hyrox”. To do this I needed to implement the following guardrails.</p>
+<ul>
+<li>Ensure the prompt input has a character limit and doesn’t allow weird inputs like code injection. This requires user prompts to be short and sweet.</li>
+<li>Rate limit the API endpoint. To avoid “spam attacks” where some person or bot rapidly submits a bunch of questions the application reasonably limits API requests per user. This also ensures I don’t have run away costs on my server.</li>
+<li>Prompt engineering to stay on topic and avoid LLM abuse. In this application there is never a use case for profanity or responding to subjects unrelated to Hyrox. To protect against any possible prompts that a user can enter I engineered some prewritten instructions that tells the LLM initially how to respond given certain keywords that might be in their prompt.</li>
+</ul>
+<h2 id="data-set">Data Set</h2>
+<p>For the LLM to be as factual as possible I resorted to training it on information publicly available from the Hyrox website and Wikipedia, this includes the official rule books, website content about the distances &amp; format, athlete results, upcoming races, history of the sport, etc.</p>
+<h2 id="future-improvements">Future Improvements</h2>
+<p>For right now I am simply collecting feedback on the existing version of this project to help me determine which direction I should take with it.</p>
+<p>In the future this “AI Assistant” could take different forms and doesn’t necessarily have to be a chat interface. It could also be used alongside other</p>
+<h2 id="additional-resources">Additional Resources</h2>
+<p><a href="https://js.langchain.com/v0.2/docs/how_to/migrate_agent">How to migrate from legacy LangChain agents to LangGraph | 🦜️🔗 Langchain</a></p>
+<p><a href="https://v02.api.js.langchain.com/functions/langchain_agents.createOpenAIToolsAgent.html">createOpenAIToolsAgent | LangChain.js - v0.2.12</a></p>
+<p><a href="https://js.langchain.com/v0.2/docs/tutorials/sql_qa/">Build a Question/Answering system over SQL data | 🦜️🔗 Langchain</a></p>
+<p><a href="https://v02.api.js.langchain.com/classes/langchain_agents_toolkits_sql.SqlToolkit.html">SqlToolkit | LangChain.js - v0.2.11</a></p>
+<p><a href="https://www.youtube.com/watch?v=vxk6YPRVg_o">The Biggest Issues I’ve Faced Web Scraping (and how to fix them)</a></p>
+<p><a href="https://docs.inferless.com/how-to-guides/how-to-finetune--and-inference-llama3">How to Finetune and Inference Llama-3 - Inferless</a></p>
+<p><a href="https://modal.com/docs/examples/llm-finetuning">Fine-tune an LLM in minutes (ft. Llama 2, CodeLlama, Mistral, etc.)</a></p>
+<p><a href="https://www.youtube.com/watch?v=u5Vcrwpzoz8">“I want Llama3 to perform 10x with my private knowledge” - Local Agentic RAG w/ llama3</a></p>
+<p><a href="https://medium.com/dataherald/how-to-langchain-sqlchain-c7342dd41614">How to connect LLM to SQL database with LangChain SQLChain</a></p>
+<p><a href="https://www.sakunaharinda.xyz/ragatouille-book/1_Intro.html">1. Introduction to RAG with Langchain — Ragatouille</a></p>
+<p><a href="https://www.youtube.com/watch?v=k_1pOF1mj8k&list=PL8motc6AQftnHhi2X8M3rqEFwERPVup4c&index=4">Ollama meets LangChain</a></p>
+<p><a href="https://www.youtube.com/watch?v=u5Vcrwpzoz8">“I want Llama3 to perform 10x with my private knowledge” - Local Agentic RAG w/ llama3</a></p>
+<p><a href="https://www.youtube.com/watch?v=qppV3n3YlF8">RAG Explained</a></p>
+<p><a href="https://www.youtube.com/watch?v=sVcwVQRHIc8">Learn RAG From Scratch – Python AI Tutorial from a LangChain Engineer</a></p> </div> </main> </div> </div> </body></html>
