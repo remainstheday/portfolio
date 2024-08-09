@@ -1,22 +1,33 @@
 ---
-title: Hyrox AI Search
+title: Hyrox Search Engine
 pubDate: 2024-09-01
-description: "building a niche LLM for the Hyrox community"
+description: "building a search LLM for the Hyrox community"
 author: "Trenton Kennedy"
 layout: ../../layouts/Writing.astro
 cover: "/3b21e96676f7400fb61d071518714734.jpg"
-background: "/3b21e96676f7400fb61d071518714734.jpg"
+background: "/hyrox.png"
 ---
-
-# Hyrox AI Search
-
-## Introduction
+import { Image } from "astro:assets";
+import QuestionTable from "../../components/QuestionTable.astro"
 
 Recently I decided to train my own Large Language Model (LLM) on all the information I could find publicly about the sport of Hyrox. This exercise led me to create a specialized “search engine” that is highly knowledgable on information related to the sport I love so dearly. For my “Hyrox AI Search Engine” app to be useful it needed a mixture of fine-tuning, SQL data querying, and Resource Augmented Generation. To be honest most of this engineering was only possible thanks to tools like Langchain which make it possible for engineers like myself to interact with AI models programmatically. Another interesting takeaway was that I had to implement guard rails throughout the application stack to ensure the LLM won’t get abused with off-topic questions. The final project came together nicely! I see potential for niche communities to benefit from something like this.
 
 ## What about ChatGPT?
 
-While ChatGPT is certainly the most popular LLM available today and it has the most impressive capabilities it sometimes struggles to provide meaningful or even accurate information when it comes to niche subjects. Even a simple question like “what is a Hyrox event?” shows us that ChatGPT cannot be trusted (_Kettle bell **swings** are not a part of Hyrox racing_). **ChatGPT brought LLM’s to the general public but open source models + engineers will be responsible for integrating LLM functionality into existing applications we all use today.**
+<Image
+  src="/chatgpt.png"
+  width="500"
+  height="250"
+  alt="ChatGPT is not great for Hyrox."
+/>
+While ChatGPT is certainly the most popular LLM available today and it has the
+most impressive capabilities it sometimes struggles to provide meaningful or
+even accurate information when it comes to niche subjects. Even a simple
+question like “what is a Hyrox event?” shows us that ChatGPT cannot be trusted
+(_Kettle bell **swings** are not a part of Hyrox racing_). **ChatGPT brought
+LLM’s to the general public but open source models + engineers will be
+responsible for integrating LLM functionality into existing applications we all
+use today.**
 
 I’m betting that custom “AI agents” trained on a certain subject, maintained by specialists, and regularly updated will be how this new technology shines in the near future.
 
@@ -28,11 +39,7 @@ Meta’s Llama 3 (which is what I used in this application) can run locally on t
 
 To measure usefulness I created a set of increasingly complex questions that people are likely to ask on the subject of Hyrox and then compared the answers between ChatGPT vs [remainstheday.org/hyrox](http://remainstheday.org/hyrox) . As an athlete myself and member of the Hyrox community expectations were high. I needed this model to not only provide better answers than ChatGPT but to also teach me something new about the sport with accuracy. Imagine being able to immediately answer questions like:
 
-“who are the fastest female athletes in Doubles Hyrox?”
-
-“what is the average finishing time for males in the 30-34 age group?”
-
-“In Hyrox doubles how many times can partners swap out during each workout?”
+<QuestionTable />
 
 Ultimately the community can determine it’s usefulness but I’m convinced that it’s already more useful than Hyrox’s own website.
 
