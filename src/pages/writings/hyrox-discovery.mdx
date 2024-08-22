@@ -1,19 +1,24 @@
 ---
-title: Hyrox Search Engine
+title: Hyrox Discovery Engine
 pubDate: 2024-09-01
 description: "building a search LLM for the Hyrox community"
 author: "Trenton Kennedy"
 layout: ../../layouts/Writing.astro
 cover: "/3b21e96676f7400fb61d071518714734.jpg"
-background: "/hyrox.png"
+background: "/3b21e96676f7400fb61d071518714734.jpg"
 ---
 import { Image } from "astro:assets";
 import QuestionTable from "../../components/QuestionTable.astro"
 
+<Image
+  src="/hyrox.png"
+  width="500"
+  height="250"
+  alt="ChatGPT is not great for Hyrox."
+/>
 Recently I decided to train my own Large Language Model (LLM) on all the information I could find publicly about the sport of Hyrox. This exercise led me to create a specialized “search engine” that is highly knowledgable on information related to the sport I love so dearly. For my “Hyrox AI Search Engine” app to be useful it needed a mixture of fine-tuning, SQL data querying, and Resource Augmented Generation. To be honest most of this engineering was only possible thanks to tools like Langchain which make it possible for engineers like myself to interact with AI models programmatically. Another interesting takeaway was that I had to implement guard rails throughout the application stack to ensure the LLM won’t get abused with off-topic questions. The final project came together nicely! I see potential for niche communities to benefit from something like this.
 
 ## What about ChatGPT?
-
 <Image
   src="/chatgpt.png"
   width="500"

@@ -1,6 +1,6 @@
 ---
 import "@fontsource/tiny5";
-import { ViewTransitions, fade, slide } from "astro:transitions";
+import { ViewTransitions } from "astro:transitions";
 import { Image } from "astro:assets";
 import type { MarkdownLayoutProps } from "astro";
 
@@ -42,7 +42,7 @@ const { frontmatter } = Astro.props;
     <body>
         <div class="w-full">
             <Image
-                class="w-full xl:w-1/2 left-0 xl:left-auto h-48 xl:h-full object-cover xl:mt-0 xl:fixed z-0 right-0 xl:top-0"
+                class="w-full xl:w-1/2 left-0 xl:left-auto h-48 xl:h-full object-fill xl:mt-0 xl:fixed z-0 right-0 xl:top-0"
                 src={frontmatter.background}
                 alt=""
                 width={250}
