@@ -1,14 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
-const pageTitle = "Writings by Trenton Kennedy";
-const allWritings = await Astro.glob("../pages/writings/*mdx");
+const pageTitle = "Prototypes by Trenton Kennedy";
+const allWritings = await Astro.glob("../pages/prototypes/*mdx");
 ---
 
 <Layout title={pageTitle}>
     <div>
-        <h1 class="text-4xl font-bold">Thoughts, Prototypes, & Ideas</h1>
-        
+        <h2 class="text-4xl font-bold mb-2">The Inventor</h2>
+        <i>
+            These are my original thoughts, ideas, and prototypes which aim to address challenges I find worth solving.</i>
         <div class="my-10 grid grid-cols-1 lg:grid-cols-3">
             {
                 allWritings.map((article) => (
@@ -23,16 +24,13 @@ const allWritings = await Astro.glob("../pages/writings/*mdx");
                                     }
                                     width={250}
                                     height={250}
-                                    alt={article.frontmatter.title}
+                                    alt={article.frontmatter.title || ""}
                                 />
                             </div>
                             <span class="font-bold text-lg">
                                 {article.frontmatter.title}
                             </span>
-                            <p class="text-sm">{article.frontmatter.date}</p>
-                            <i class="text-sm">
-                                {article.frontmatter.description}
-                            </i>
+                            
                         </a>
                     </div>
                 ))
@@ -40,3 +38,8 @@ const allWritings = await Astro.glob("../pages/writings/*mdx");
         </div>
     </div>
 </Layout>
+<style>
+    h2 {
+        font-family: "Bona Nova", serif;
+    }
+</style>
